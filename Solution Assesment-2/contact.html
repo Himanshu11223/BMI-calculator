@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WellSpring Family Clinic</title>
+<meta name="description" content="Community health clinic website for families: services, BMI calculator, appointment request, and contact information.">
+<link rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="index.html">WellSpring</a>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="bmi.html">BMI Calculator</a>
+    <a href="appointment.html">Appointment</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+</header>
+
+<main id="main">
+  <section class="reveal">
+    <h1>Contact</h1>
+    <p><strong>Address:</strong> 123 Main St, Melbourne</p>
+    <p><strong>Phone:</strong> (03) 1234 5678</p>
+    <p><strong>Email:</strong> clinic@example.com</p>
+    <div class="map-placeholder" role="img" aria-label="Map placeholder">Map goes here</div>
+
+    <h2>Contact Form</h2>
+    <form id="contact-form" class="form" novalidate>
+      <label for="c_name">Full Name</label>
+      <input id="c_name" name="name" required>
+
+      <label for="c_email">Email</label>
+      <input id="c_email" name="email" type="email" required>
+
+      <label for="c_msg">Message</label>
+      <textarea id="c_msg" name="message" rows="4" required></textarea>
+
+      <div class="row">
+        <button type="submit" class="btn">Send Message</button>
+      </div>
+      <p id="contact-status" class="status" aria-live="polite"></p>
+    </form>
+  </section>
+</main>
+<footer class="site-footer">
+  <p>&copy; 2025 WellSpring Family Clinic</p>
+</footer>
+<script src="assets/js/main.js"></script>
+
+<script src="assets/js/forms.js"></script>
+</body>
+</html>

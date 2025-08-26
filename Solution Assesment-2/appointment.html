@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WellSpring Family Clinic</title>
+<meta name="description" content="Community health clinic website for families: services, BMI calculator, appointment request, and contact information.">
+<link rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="index.html">WellSpring</a>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="bmi.html">BMI Calculator</a>
+    <a href="appointment.html">Appointment</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+</header>
+
+<main id="main">
+  <section class="reveal">
+    <h1>Appointment Request</h1>
+    <form id="appointment-form" class="form" novalidate>
+      <label for="a_name">Full Name</label>
+      <input id="a_name" name="name" required>
+
+      <label for="a_email">Email</label>
+      <input id="a_email" name="email" type="email" required>
+
+      <label for="a_phone">Phone</label>
+      <input id="a_phone" name="phone" type="tel" pattern="^[0-9 +()-]{7,}$" required>
+
+      <label for="a_date">Preferred Date</label>
+      <input id="a_date" name="date" type="date" required>
+
+      <label for="a_msg">Message</label>
+      <textarea id="a_msg" name="message" rows="4" required></textarea>
+
+      <button type="submit" class="btn">Send Request</button>
+      <p id="appointment-status" class="status" aria-live="polite"></p>
+    </form>
+  </section>
+</main>
+<footer class="site-footer">
+  <p>&copy; 2025 WellSpring Family Clinic</p>
+</footer>
+<script src="assets/js/main.js"></script>
+
+<script src="assets/js/forms.js"></script>
+</body>
+</html>

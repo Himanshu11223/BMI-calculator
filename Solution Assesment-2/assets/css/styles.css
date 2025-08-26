@@ -1,0 +1,144 @@
+
+:root{
+  --bg:#ffffff;
+  --fg:#1b1b1b;
+  --brand:#0a7ea4;
+  --muted:#f5f7f8;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;
+  line-height:1.6;
+  color:var(--fg);
+  background:var(--bg)
+}
+
+.site-header{display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 20px;
+  background:#fff;
+  position:sticky;
+  top:0;
+  border-bottom:1px solid #e5e7eb;
+  z-index:10
+}
+.logo{
+  font-weight:700;
+  text-decoration:none;
+  color:var(--brand);
+  font-size:1.25rem
+}
+.nav a{
+  margin-right:12px;
+  text-decoration:none;
+  color:#111
+}
+.nav a:last-child{
+  margin-right:0
+}
+.nav-toggle{
+  display:none;
+  background:none;
+  border:1px solid #ddd;
+  padding:6px 10px;
+  border-radius:6px
+}
+.site-footer{
+  padding:24px 20px;
+  background:var(--muted);
+  margin-top:40px;
+  text-align:center
+}
+.hero{
+  padding:80px 20px;
+  text-align:center;
+  background:linear-gradient(180deg,#e7f7fb,transparent)
+}
+.btn{
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:8px;
+  background:var(--brand);
+  color:#fff;
+  text-decoration:none;
+  border:none;
+  cursor:pointer
+}
+.btn.secondary{
+  background:#6b7280
+}
+.features{
+  padding:40px 20px
+}
+.cards{
+  list-style:none;
+  padding:0;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:12px
+}
+.card{
+  padding:18px;
+  border:1px solid #e5e7eb;
+  border-radius:10px;
+  background:#fff
+}
+.form{
+  display:grid;
+  gap:10px;
+  max-width:520px
+}
+input,select,textarea{
+  width:100%;
+  padding:10px;
+  border:1px solid #d1d5db;
+  border-radius:8px
+}
+.row{
+  display:flex;
+  gap:10px
+}
+.result,.status{
+  margin-top:10px;
+  font-weight:600
+}
+.map-placeholder{
+  height:200px;
+  background:#e5e7eb;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:10px 0
+}
+.reveal{
+  opacity:0;
+  transform:translateY(12px);
+  transition:all .5s ease
+}
+.reveal.visible{
+  opacity:1;
+  transform:none
+}
+@media (max-width:768px){
+  .nav{
+    display:none
+  }
+  .nav.open{
+    display:block;
+    position:absolute;
+    right:10px;
+    top:56px;
+    background:#fff;
+    border:1px solid #e5e7eb;
+    padding:10px;
+    border-radius:10px
+  }
+  .nav-toggle{
+    display:block
+  }
+}
